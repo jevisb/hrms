@@ -14,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'hrms',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -42,14 +42,17 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'collaboration/list-standard-reports' => 'collaboration/list-standard-reports',
+                'collaboration/create-ad-hoc-report' => 'collaboration/create-ad-hoc-report',
+                'collaboration/create-mailing-list' => 'collaboration/create-mailing-list',
+                'collaboration/send-notification' => 'collaboration/send-notification',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
